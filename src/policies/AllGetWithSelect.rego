@@ -7,15 +7,15 @@ default allow := false
 allow 
 {
     input.resource.method == "GET"
-    input.resource.query["select"] != null
-    input.resource.query["select"] != ""
+    input.resource.queryParameters["select"] != null
+    input.resource.queryParameters["select"] != ""
 }
 
 allow 
 {
     input.resource.method == "GET"
-    input.resource.query["$select"] != null
-    input.resource.query["$select"] != ""
+    input.resource.queryParameters["$select"] != null
+    input.resource.queryParameters["$select"] != ""
 }
 
 allow
