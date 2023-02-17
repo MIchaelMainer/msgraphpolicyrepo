@@ -1,4 +1,4 @@
-package AllGetWithSelect
+package DisallowGETsWithoutSelect
 
 import future.keywords.if
 
