@@ -6,19 +6,19 @@ default allow := false
 
 allow 
 {
-    input.resource.method == "GET"
-    input.resource.queryParameters["select"] != null
-    input.resource.queryParameters["select"] != ""
+    input.resource.httpRequest.method == "GET"
+    input.resource.httpRequest.queryParameters["select"] != null
+    input.resource.httpRequest.queryParameters["select"] != ""
 }
 
 allow 
 {
-    input.resource.method == "GET"
-    input.resource.queryParameters["$select"] != null
-    input.resource.queryParameters["$select"] != ""
+    input.resource.httpRequest.method == "GET"
+    input.resource.httpRequest.queryParameters["$select"] != null
+    input.resource.httpRequest.queryParameters["$select"] != ""
 }
 
 allow
 {
-    input.resource.method != "GET"
+    input.resource.httpRequest.method != "GET"
 }

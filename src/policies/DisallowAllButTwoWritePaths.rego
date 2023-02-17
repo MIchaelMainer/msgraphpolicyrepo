@@ -6,17 +6,17 @@ default allow := false
 
 allow 
 {
-	input.resource.method == "GET"
+	input.resource.httpRequest.method == "GET"
 }
 
 allow
 {
-	input.resource.method == "POST"
-    input.resource.path == "/v1.0/users"
+	input.resource.httpRequest.method == "POST"
+    input.resource.httpRequest.path == "/v1.0/users"
 }
 
 allow
 {
-	input.resource.method == "DELETE"
-	regex.match("/v1.0/users/[^/]+$", input.resource.path)
+	input.resource.httpRequest.method == "DELETE"
+	regex.match("/v1.0/users/[^/]+$", input.resource.httpRequest.path)
 }
