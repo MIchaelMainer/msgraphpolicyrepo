@@ -6,10 +6,10 @@ default allow := false
 
 allow 
 {
-	startswith(input.path, "/v1.0/users")
+	startswith(input.resource.path, "/v1.0/users")
 }
 
 allow
 {
-    startswith(input.path, "/beta/users")
+    startswith(input.resource.path, "/beta/users")
 }

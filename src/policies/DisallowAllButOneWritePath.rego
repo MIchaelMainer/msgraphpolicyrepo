@@ -6,11 +6,11 @@ default allow := false
 
 allow 
 {
-	input.method == "GET"
+	input.resource.method == "GET"
 }
 
 allow
 {
-	input.method == "POST"
-    input.path == "/v1.0/users"
+	input.resource.method == "POST"
+    input.resource.path == "/v1.0/users"
 }

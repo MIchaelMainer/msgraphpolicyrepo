@@ -6,19 +6,19 @@ default allow := false
 
 allow 
 {
-    input.method == "GET"
-    input.query["select"] != null
-    input.query["select"] != ""
+    input.resource.method == "GET"
+    input.resource.query["select"] != null
+    input.resource.query["select"] != ""
 }
 
 allow 
 {
-    input.method == "GET"
-    input.query["$select"] != null
-    input.query["$select"] != ""
+    input.resource.method == "GET"
+    input.resource.query["$select"] != null
+    input.resource.query["$select"] != ""
 }
 
 allow
 {
-    input.method != "GET"
+    input.resource.method != "GET"
 }
