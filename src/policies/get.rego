@@ -7,6 +7,6 @@ allowed {
 }
 
 # authorize users in the sales department
-# allowed {
-#   input.user.attributes.properties.department == "Sales"
-# }
+allowed {
+  input.user.attributes.properties.department == "Sales"
+}
