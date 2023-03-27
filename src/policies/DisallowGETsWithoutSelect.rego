@@ -21,5 +21,4 @@ allow
 allow
 {
     input.resource.httpRequest.method != "GET"
-    input.resource.httpRequest.method != "POST"
 }
